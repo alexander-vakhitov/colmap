@@ -109,6 +109,7 @@ size_t IncrementalTriangulator::TriangulateImage(const Options& options,
   }
 
   if (HasCameraBogusParams(options, *image.CameraPtr())) {
+    LOG(INFO) << "Image has bogus params!";
     return num_tris;
   }
 
